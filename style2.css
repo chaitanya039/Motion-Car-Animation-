@@ -1,0 +1,112 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    overflow: hidden;
+}
+
+.sky{
+    height: 100vh;
+    width: 100%;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.nature{
+    height: 100vh;
+    width: 100%;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -200px;
+}
+
+.track{
+    height: 30vh;
+    width: 900vw;
+    background-image: url('track.png');
+    background-repeat: repeat-x;
+    position: absolute;
+    /* top: 0%; */
+    bottom: 15px;
+    animation: carMove linear 3s infinite;
+}
+
+.car{
+    height:200px;
+    width: 350px;
+    background-image: url('car.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 17.65vh;
+    left: 200px;
+    animation: carShake linear 0.9s infinite;
+}
+
+.wheel1 img{
+    width: 55px;
+    height: 55px;
+    position: relative;
+    left: 238px;
+    top: 89px;
+    animation: wheelRotation linear 0.16s infinite ;
+}
+
+.wheel2 img{
+    width: 55px;
+    height: 55px;
+    position: relative;
+    left: 60px;
+    top: 30px;
+    animation: wheelRotation linear 0.16s infinite ;
+}
+
+#btn{
+    background-color: darkorange;
+    color: white;
+    padding: 5px;
+    margin: 3px;
+    font-size: 1rem;
+    border: 2px solid white;
+    border-radius: 11px;
+}
+
+#btn:hover{
+    background-color: orangered;
+}
+
+/* animation part */
+
+@keyframes wheelRotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove {
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes  carShake{
+    0%{
+        transform: translateY(-3px);
+    }
+
+    50%{
+        transform: translateY(3px);
+    }
+
+    100%{
+        transform: translateY(-3px);
+    }
+}
+
+
+
